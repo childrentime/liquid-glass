@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background: #fafafa;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* 背景样式 */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #eeeeee 100%);
+}
+
+.pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px;
+}
+
+/* 内容样式 */
+.content {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.main {
+  width: 100%;
+}
+
+/* 演示介绍 */
+.demo-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.demo-intro h2 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* 演示内容区域 */
+.demo-content {
+  margin-bottom: 4rem;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.demo-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.demo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #ccc;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.demo-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.demo-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 技术说明区域 */
+.tech-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.tech-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tech-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tech-item strong {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.tech-item span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 平板横屏 */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .demo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* 平板竖屏和大手机 */
+@media (max-width: 767px) {
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .header p {
+    font-size: 1.1rem;
+  }
+  
+  .demo-intro h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  .demo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .demo-card {
+    padding: 1.5rem;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+  }
+  
+  .demo-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .demo-card p {
+    font-size: 0.9rem;
+  }
+  
+  .tech-section {
+    padding: 2rem 0;
+  }
+  
+  .tech-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tech-item {
+    padding: 1.2rem;
+  }
+  
+  .demo-content {
+    margin-bottom: 2rem;
+  }
+}
+
+/* 小手机 */
+@media (max-width: 480px) {
+  .content {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .demo-intro h2 {
+    font-size: 1.3rem;
+  }
+  
+  .demo-card {
+    padding: 1.2rem;
+  }
+  
+  .tech-item {
+    padding: 1rem;
+  }
+}
