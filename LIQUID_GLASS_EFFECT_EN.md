@@ -4,14 +4,14 @@ Apple has introduced a stunning Liquid Glass effect in their latest design syste
 
 ## Core Concept: Giving Pixels Moving Instructions
 
-Think of every pixel on your screen as a tiny person, and the glass effect is basically giving these little folks "relocation orders":
+Think of every pixel on your screen as a tiny person, and the glass effect is basically giving these little folks "relocation orders." The following image clearly demonstrates this process:
 
-```
-Original scene:      After glass distortion:
-A B C D              A   C D
-E F G H    →         E F   H  
-I J K L              I J K L
-```
+![Liquid Glass Distortion Effect Diagram](https://private-us-east-1.manuscdn.com/sessionFile/pBvyu3BUgWdnCq8C15T1UU/sandbox/9tNhqfFTkQXjghBxkCzqrr-images_1754280772513_na1fn_L2hvbWUvdWJ1bnR1L3BpeGVsX2Rpc3BsYWNlbWVudF9pbGx1c3RyYXRpb24.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcEJ2eXUzQlVnV2RuQ3E4QzE1VDFVVS9zYW5kYm94Lzl0TmhxZkZUa1FYamdoQnhrQ3pxcnItaW1hZ2VzXzE3NTQyODA3NzI1MTNfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzQnBlR1ZzWDJScGMzQnNZV05sYldWdWRGOXBiR3gxYzNSeVlYUnBiMjQucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Me5YjhrvfiOvFq2lxgnmlOlTn9gU7kAP~5o7eZ4Sy3JvplR2vjMVqof2O6aWuyaCJaV2C3ntzn5sGsyGvY0KtizbripoFyZYhcWotcVcxfiSsTHbw5w3f~vIkX5EN2ocTpQHSdRP5JBGlPpkEaXhVHmS5mGpsOu1Bsnvn1ywI1hMXMnzimhg4yIswlwSnfk0NqURkfvvtiUyOHaW8FTM5BMdfxGZUb7AURHCu7okpPSvIRT4~55Vatczh1JWGEVdJhylZsjPHi~hH1w7yOsuKJ3ihMeHPwC5j9gIESohlBUorPaLxBy72qVS3W01O6T-oh~Juaigr5I5Aq-cIJNLcQ__)
+
+The left side shows the original regular grid, while the right side shows the same grid after liquid glass distortion. Notice how:
+- The center area is magnified and focused
+- Surrounding areas are curved and deformed  
+- Every grid cell is still there, just with changed positions and shapes
 
 **The question is: how do you precisely tell each pixel where to move?**
 

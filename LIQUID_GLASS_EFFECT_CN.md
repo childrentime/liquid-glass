@@ -4,14 +4,14 @@
 
 ## 基本思路：给像素发搬家指令
 
-可以把屏幕上的每个像素想象成一个小人，玻璃效果就是给这些小人下达"搬家指令"：
+可以把屏幕上的每个像素想象成一个小人，玻璃效果就是给这些小人下达"搬家指令"。下图清晰地展示了这个过程：
 
-```
-原始画面：      玻璃扭曲后：
-A B C D         A   C D
-E F G H    →    E F   H  
-I J K L         I J K L
-```
+![液体玻璃扭曲效果示意图](https://private-us-east-1.manuscdn.com/sessionFile/pBvyu3BUgWdnCq8C15T1UU/sandbox/9tNhqfFTkQXjghBxkCzqrr-images_1754280772513_na1fn_L2hvbWUvdWJ1bnR1L3BpeGVsX2Rpc3BsYWNlbWVudF9pbGx1c3RyYXRpb24.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcEJ2eXUzQlVnV2RuQ3E4QzE1VDFVVS9zYW5kYm94Lzl0TmhxZkZUa1FYamdoQnhrQ3pxcnItaW1hZ2VzXzE3NTQyODA3NzI1MTNfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzQnBlR1ZzWDJScGMzQnNZV05sYldWdWRGOXBiR3gxYzNSeVlYUnBiMjQucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Me5YjhrvfiOvFq2lxgnmlOlTn9gU7kAP~5o7eZ4Sy3JvplR2vjMVqof2O6aWuyaCJaV2C3ntzn5sGsyGvY0KtizbripoFyZYhcWotcVcxfiSsTHbw5w3f~vIkX5EN2ocTpQHSdRP5JBGlPpkEaXhVHmS5mGpsOu1Bsnvn1ywI1hMXMnzimhg4yIswlwSnfk0NqURkfvvtiUyOHaW8FTM5BMdfxGZUb7AURHCu7okpPSvIRT4~55Vatczh1JWGEVdJhylZsjPHi~hH1w7yOsuKJ3ihMeHPwC5j9gIESohlBUorPaLxBy72qVS3W01O6T-oh~Juaigr5I5Aq-cIJNLcQ__)
+
+左边是原始的规整网格，右边展示了被液体玻璃扭曲后的效果。可以看到：
+- 中心区域被放大聚焦
+- 周围区域产生弯曲变形  
+- 每个格子都还在，只是位置和形状发生了变化
 
 **问题是：怎样精确地告诉每个像素该往哪里搬？**
 
